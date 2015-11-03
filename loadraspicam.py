@@ -26,7 +26,7 @@ def loadT14(h5fn):
 
     return T
 
-def plotT(T,log):
+def plotT(T,log,sensor):
     assert isinstance(T,DataFrame)
 
     ax = figure(figsize=(12,6)).gca()
@@ -34,7 +34,7 @@ def plotT(T,log):
     ax.plot(T.index,T['green'],color='g')
     ax.plot(T.index,T['blue'],color='b')
     ax.invert_xaxis()
-    ax.set_title('Raspberry Pi OV5647 Optical Transmission')
+    ax.set_title('Raspberry Pi OV5647 Optical Transmission '+sensor)
     ax.set_xlabel('wavelength [nm]')
     ax.set_ylabel('Transmission')
     ax.grid(True,which='both')
@@ -48,7 +48,7 @@ def plotT(T,log):
 
 if __name__ == '__main__':
     T = loadT14('raspicamOV5647.h5')
-    plotT(T,False)
-    plotT(T,True)
+    plotT(T,False,'$1.4\mu$m sensor')
+    plotT(T,True,'$1.4\mu$m sensor')
 
     show()
