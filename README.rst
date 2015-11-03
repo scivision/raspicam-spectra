@@ -2,8 +2,10 @@
 raspicam-OV5647
 ================
 
-Raspberry Pi camera spectral response OV5647
+Raspberry Pi camera spectral response OV5647.
 
-Traces digitized by Koen Hufkin.
+Considers QE of sensor and Bayer mask transmission in cascade.
 
-.. image:: OV5467_log_transmission.png
+Traces digitized by Koen Hufkens.
+
+.. image:: OV5647_log_transmission.png
