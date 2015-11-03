@@ -1,0 +1,16 @@
+#with h5py.File('raspicamOV5647.h5','r+') as f:
+#    Tr14 = f['/bayer_rgb']['red']   * f['/peakQE_1.4um']['red']
+#    Tg14 = f['/bayer_rgb']['green'] * f['/peakQE_1.4um']['green']
+#    Tb14 = f['/bayer_rgb']['blue']  * f['/peakQE_1.4um']['blue']
+#
+##    f['/T/1.4um']['red']   = Tr14
+##    f['/T/1.4um']['green'] = Tg14
+##    f['/T/1.4um']['blue']  = Tb14
+#
+#    Tr17 = f['/bayer_rgb']['red']   * f['/peakQE_1.75um']['red']
+#    Tg17 = f['/bayer_rgb']['green'] * f['/peakQE_1.75um']['green']
+#    Tb17 = f['/bayer_rgb']['blue']  * f['/peakQE_1.75um']['blue']
+#
+##    f['/T/1.75um']['red']   = Tr17
+##    f['/T/1.75um']['green'] = Tg17
+##    f['/T/1.7um']['blue']  = Tb17
