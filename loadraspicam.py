@@ -19,12 +19,12 @@ except ImportError:
 def loadT(fn: Path) -> xarray.DataArray:
     fn = Path(fn).expanduser()
 
-    dat = xarray.open_dataarray(fn, autoclose=True)
+    dat = xarray.open_dataarray(fn)
 
     return dat
 
 
-def plotT(T: xarray.DataArray, name: str=''):
+def plotT(T: xarray.DataArray, name: str = ''):
 
     fg = figure()
     ax = fg.gca()

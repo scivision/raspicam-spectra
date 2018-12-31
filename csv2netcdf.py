@@ -5,7 +5,7 @@ from pathlib import Path
 from argparse import ArgumentParser
 
 
-def csv2nc(csvfn: Path, ncfn: Path=None) -> xarray.DataArray:
+def csv2nc(csvfn: Path, ncfn: Path = None) -> xarray.DataArray:
 
     df = pandas.read_csv(csvfn, index_col=0, comment='#').clip(
         lower=0., upper=100.) / 100.
